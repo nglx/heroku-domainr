@@ -1,9 +1,10 @@
+require 'heroku'
 require 'heroku/plugins/domainr/config'
 
 module Heroku
   module Plugins
     module Domainr
-      @@heroku_client
+      @@heroku_client = nil
 
       def domains_add(domain)
         heroku_client.add_domain(Heroku::Plugins::Domainr::Config.heroku_app, domain)
@@ -18,8 +19,8 @@ module Heroku
       end
 
       def heroku_client
-        @@heroku_client ||= Heroku::Client.new(Heroku::Plugins::Domainr::Config.heroku_user,
-                                               Heroku::Plugins::Domainr::Config.heroku_pass)
+        @@heroku_client || @@heroku_client = Heroku::Client.new(Heroku::Plugins::Domainr::Config.heroku_user,
+                                                                Heroku::Plugins::Domainr::Config.heroku_pass)
       end
 
       def self.config

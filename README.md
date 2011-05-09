@@ -28,7 +28,7 @@ You can also setup it using the following initializer:
 
 Using the heroku-domainr plugin:
 
-    require 'heroku/plugins/domainr'
+    require 'heroku/plugins/heroku_domainr'
 
     class SampleRailsClass
       include Heroku::Plugins::Domainr
