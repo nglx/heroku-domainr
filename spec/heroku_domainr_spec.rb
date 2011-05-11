@@ -6,7 +6,9 @@ RSpec.configure do |config|
 end
 
 Heroku::Plugins::Domainr.config do |c|
-  c.heroku_app  = "app_name"
+  c.heroku_app   = "app_name"
+  c.heroku_user  = "jan"
+  c.heroku_pass  = "haslo"
 end
 
 class DomainrImpl
@@ -32,6 +34,15 @@ describe Heroku::Plugins::Domainr do
 
   it "should call heroku remove domains with app name" do
     mock(@fake_heroku_client).remove_domains("app_name")
+    @domainr.domains_clear()
+  end
+
+  it "should not call heroku client if app name is not specified" do
+    Heroku::Plugins::Domainr.config do |c|
+      c.heroku_app  = nil
+    end
+    @domainr.domains_add("alamakota")
+    @domainr.domains_remove("alamakota")
     @domainr.domains_clear()
   end
 end
