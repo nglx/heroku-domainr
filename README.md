@@ -5,6 +5,12 @@ Simple Heroku plugin for managing heroku domains.
 
 This gem adds functionality to add/remove/clear Heroku domains from within the Heroku application.
 
+##Installation
+
+Add the following to your Gemfile:
+
+    gem 'heroku-domainr'
+
 ##Setup
 
 In order for the management of the Heroku domains the plugin needs to know your Heroku app credentials. By default they're read from the following env variables:
