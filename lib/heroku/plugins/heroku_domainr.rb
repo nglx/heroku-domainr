@@ -43,7 +43,7 @@ module Heroku
 
       private
       def config_not_defined?
-        Heroku::Plugins::Domainr::Config.heroku_user.nil? || Heroku::Plugins::Domainr::Config.heroku_pass.nil? || Heroku::Plugins::Domainr::Config.heroku_app.nil?
+        Heroku::Plugins::Domainr::Config.heroku_user.empty? || Heroku::Plugins::Domainr::Config.heroku_pass.empty? || Heroku::Plugins::Domainr::Config.heroku_app.empty?
       end
 
       def log(message)
