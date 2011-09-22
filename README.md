@@ -5,7 +5,7 @@ Simple Heroku plugin for managing heroku domains.
 
 This gem adds functionality to add/remove/clear Heroku domains from within the Heroku application.
 
-<img src="http://travis-ci.org/managr/heroku-domainr.png" />
+[![Build Status](https://secure.travis-ci.org/managr/heroku-domainr.png)](http://travis-ci.org/managr/heroku-domainr)
 
 ##Installation
 
