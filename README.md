@@ -7,13 +7,13 @@ This gem adds functionality to add/remove/clear Heroku domains from within the H
 
 [![Build Status](https://secure.travis-ci.org/managr/heroku-domainr.png)](http://travis-ci.org/managr/heroku-domainr)
 
-##Installation
+## Installation
 
 Add the following to your Gemfile:
 
     gem 'heroku-domainr'
 
-##Setup
+## Setup
 
 In order for the management of the Heroku domains the plugin needs to know your Heroku app credentials. By default they're read from the following env variables:
 
@@ -32,7 +32,7 @@ You can also setup it using the following initializer:
     end
 
 
-##Usage
+## Usage
 
 Using the heroku-domainr plugin:
 
